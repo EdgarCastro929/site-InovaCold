@@ -1,0 +1,126 @@
+Empresa angolana de base tecnológica especializada no desenvolvimento de soluções digitais para
+empresas e instituições, atuando em desenvolvimento de software Web, Mobile e Desktop, sistemas de
+gestão e faturação, websites, marketing digital, design gráfico, manutenção de hardware e software,
+consultoria tecnológica e formação profissional em TI.
+
+
+-------------------------------------------------------------------------------
+
+Apresentar a empresa, fortalecer a presença digital, disponibilizar serviços tecnológicos ao mercado
+angolano e internacional, permitir aos visitantes conhecer a missão, visão, equipa, portfólio, solicitar
+orçamentos, contratar serviços, entrar em contacto, acompanhar novidades, demonstrar produtos, pedidos
+de suporte técnico, candidaturas a vagas, publicação de artigos, apresentação de casos de sucesso, venda
+de serviços digitais e futura loja online.
+
+-----------------------------------------------------------------------------------------
+
+Desenvolvimento de software Web, Mobile e Desktop, desenvolvimento de sistemas de gestão empresarial
+(ERP), desenvolvimento de sistemas de faturação certificados pela AGT, criação de websites institucionais,
+corporativos e lojas virtuais (e-commerce), desenvolvimento de aplicações personalizadas para empresas,
+marketing digital e gestão de redes sociais, design gráfico e identidade visual, branding e comunicação
+digital, consultoria em Tecnologia da Informação (TI), transformação digital para empresas, instalação e
+configuração de redes informáticas, manutenção preventiva e corretiva de hardware e software, assistência
+técnica informática, hospedagem de websites e gestão de domínios, cibersegurança e proteção de dados,
+computação em nuvem (Cloud Computing), formação profissional em programação, tecnologia e
+competências digitais, desenvolvimento e integração de soluções com Inteligência Artificial,
+desenvolvimento de sistemas para escolas, clínicas, hotéis, restaurantes, supermercados e outros setores.
+Produtos: Sistema de Gestão Empresarial (ERP InovaCold), Sistema de Gestão Escolar, Sistema de Gestão
+Hospitalar, Sistema de Gestão de Recursos Humanos, Sistema de Gestão de Stock e Inventário, Sistema de
+Gestão Comercial e Vendas, aplicações móveis personalizadas, websites profissionais, plataformas de e
+learning, soluções de Business Intelligence (BI) e relatórios gerenciais, templates, plugins e componentes de
+software desenvolvidos pela InovaCold. Futuramente: contratação online de serviços, solicitação de
+orçamentos, área do cliente, suporte técnico online, loja virtual para venda de software, licenças e
+equipamentos tecnológicos, venda de cursos online e certificações, base de conhecimento e documentação
+técnica, portal de recrutamento e candidaturas, blog com conteúdos sobre tecnologia, inovação e
+transformação digital.
+---------------------------------------------------------------------------------------------
+
+Apresentar a marca, atrair novos clientes, facilitar o contato, oferecer uma experiência simples para que os
+visitantes encontrem informações e realizem ações importantes, aumentar a visibilidade da marca e
+apresentar a empresa/projeto ao público, gerar vendas, pedidos ou orçamentos diretamente pelo site,
+divulgar produtos, serviços ou portfólio, construir credibilidade e confiança com depoimentos, informações
+institucionais e conteúdos, compartilhar conteúdos (blog, notícias, materiais educativos), automatizar
+processos como agendamentos, inscrições ou atendimento, melhorar o relacionamento com clientes
+existentes.
+------------------------------------------------------------------------------------------
+
+Apresentação institucional, portfólio de soluções, solicitação de orçamentos, contratação de serviços,
+formulário de contacto, área de novidades, demonstração de produtos, pedidos de suporte técnico,
+candidaturas a vagas de emprego, publicação de artigos e conteúdos educativos, apresentação de casos de
+sucesso, venda de serviços digitais, futura loja online para software próprio e equipamentos tecnológicos,
+link para plataforma oficial da InovaCursos para formação profissional.
+
+----------------------------------------------------------------------------------------
+
+Tone And Voice
+Profissional, amigável e inovador.
+Sitemap
+Home, Sobre a Empresa, Serviços, Contacto, Blog
+
+----------------------------------------------------------------------------------------
+Audience
+O público-alvo principal situa-se entre 25 e 55 anos, composto por empresários, gestores, profissionais de TI
+e responsáveis pela tomada de decisões tecnológicas nas organizações. O público secundário inclui jovens
+entre 18 e 30 anos interessados em formação, inovação e desenvolvimento de competências digitais.
+Público-alvo inclui feminino e masculino, ambos os gêneros. O público-alvo tem interesse em soluções
+tecnológicas que permitam otimizar processos, aumentar a produtividade, melhorar a gestão empresarial,
+fortalecer a presença digital e implementar inovação através de software, inteligência artificial, segurança
+informática e transformação digital.
+
+------------------------------------------------------------------------------------------
+
+Brand Style
+Moderno, minimalista, tecnológico e corporativo, transmitindo inovação, confiança e profissionalismo.
+Comunicação clara, objetiva e orientada para resultados, reforçando a imagem da InovaCold como
+especialista em soluções digitais, transformação tecnológica e inovação empresarial. Paleta moderna e
+tecnológica com predominância de tons azuis, branco e cinza para interface limpa e profissional, cores de
+destaque para chamadas de ação.
+
+------------------------------------------------------------------------------------------
+Integrations
+Integração com InovaCursos, formulários de contacto, redes sociais e formulários.
+Competitor List
+https://www.apple.com/?utm_source=chatgpt.com
+Competitor Analysis
+Concorrentes comuns incluem empresas locais de desenvolvimento de software, consultorias tecnológicas
+regionais e provedores de serviços de marketing digital. Pesquisa de concorrentes relevantes no mercado
+angolano será realizada para melhor posicionamento da InovaCold.
+
+-------------------------------------------------------------------------------------------
+
+User Experience
+Design responsivo para dispositivos móveis, navegação intuitiva, acesso rápido aos serviços, formulários
+fáceis de usar.
+
+Hosting
+nenhuma hospedagem explicitamente mencionada.
+
+Plugins
+SEO, Análises e Métricas, Integração com redes sociais.
+
+--------------------------------------------------------------------------------------------
+
+Site Language
+Português
+
+Additional Requirements
+A página de Serviços incluirá planos, detalhes técnicos e preços para cada serviço. Ao escolher um plano, o
+visitante será redirecionado para o WhatsApp da empresa com uma mensagem automática contendo o
+plano escolhido e o nome do visitante.
+-------------------------------------------------------------------------------------------
+
+Home 
+Sobre a Empresa 
+Missão e Visão
+Equipa
+Portfólio
+Serviços
+Orçamentos 
+Contratar Serviços
+Contacto
+Artigos e Conteúdos Educativos
+Casos de Sucesso
+Serviços Digitais
+Formação Profissional
+---------------------------------------------------------------------------------------
+
