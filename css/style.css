@@ -1,11 +1,29 @@
 @charset "UTF-8";
 @font-face {
-    font-family: "" ;
-    src: url();
+    font-family: "Laton" ;
+    src: url(../fonts/Lato-Black.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Merrie" ;
+    src: url(../fonts/Merriweather-VariableFont_opsz\,wdth\,wght.ttf) format("truetype");
 }
 :root{
+    /*Variáveis para cores*/
+    --cor-primary:#1E3ABA;
+    --cor-secundaria:#1E40AF;
+    --accent:#3B82F6;
+    --backg-accent:#F3F4F6;
+    --backg:#ffffff;
+    --text:#111827;
+    --transparent:#00000000;
 
+    /*Variáveis para fontes*/
+    --font-menu:"Lato";
+    --font-body:"Merrie";
 }
-*{
-
+*{/*Selector Global*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
