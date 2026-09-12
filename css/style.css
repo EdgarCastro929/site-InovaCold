@@ -28,5 +28,129 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+body{
+    background-color: var(--backg);
+}
 
+header{
+    padding: 15px;
+    background-color: var(--backg);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header #logotipo a{cursor: pointer;}
+header menu a{
+    text-decoration: none;
+    cursor: pointer;
+    margin: 3px 10px;
+    padding: 4px 10px;
+    color: var(--accent);
+    font-weight: bold;
+    transition: all .5s;
+}
+header menu a:hover{
+    color: var(--cor-secundaria);
+}
+header #btn-header a button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px 0px #f3f4f6a7;
+    font-weight: bold;
+    background-color: var(--accent);
+    color: var(--backg);
+    transition: all .5s;
+} 
+header #btn-header a button:hover{
+    background-color: var(--cor-secundaria);
+    color: var(--backg);
+}
+/*--------------------Fim do nosso cabeçalho---------------*/
+
+/*----------Corpo Principal------------------*/
+main .caixa-branca{
+    background-color: var(--backg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+main .caixa-branca .conteudo{
+    text-align: center;
+    line-height: 30px;
+    color: var(--text);
+}
+main .caixa-branca .conteudo h1{
+    margin:  20px 0px;
+    color: var(--accent);
+}
+main .caixa-branca .conteudo p#pag-g{
+    width: 730px;
+    margin: auto;
+}
+main .caixa-azul{
+    color: var(--backg);
+    height: 80vh;
+    background-color: var(--cor-primary);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+main .caixa-azul aside#esquerdo{
+    line-height: 50px;
+    p{
+        margin-bottom: 15px;
+    }
+    h1{
+        margin-bottom: 17px;
+    }
+}
+main .caixa-azul aside#direito p#pag-g{
+    width: 540px;
+    line-height: 28px;
+    text-align: justify;
+}
+main .caixa-azul aside#direito .caixa-percentagem{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+main .caixa-azul aside#direito .caixa-percentagem .caixa{
+    #percent{
+        font-size: 36px;
+        font-weight: bold;
+    }
+    p{
+        width: 250px;
+        text-align: justify;
+        line-height: 25px;
+    }
+}
+main .caixa-azul .botoes button{
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 7px;
+    color: var(--backg);
+    font-weight: bold;
+    transition: all .5s;
+}
+main .caixa-azul .botoes a button#btn1{
+    border: 0.1em solid var(--backg);
+    background-color: var(--cor-secundaria);
+}
+main .caixa-azul .botoes a button#btn2{
+    background-color: var(--cor-secundaria);
+}
+main .caixa-azul .botoes button#btn1:hover{
+    background-color: var(--accent);
+    border: none;
+}
+main .caixa-azul .botoes button#btn2:hover{
+    color: var(--backg-accent);
+    background-color: var(--accent);
+}
 
