@@ -107,6 +107,11 @@ main .caixa-azul aside#esquerdo{
         margin-bottom: 17px;
     }
 }
+main .caixa-azul aside#esquerdo #logo-caixa-azul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 main .caixa-azul aside#direito p#pag-g{
     width: 540px;
     line-height: 28px;
@@ -153,4 +158,79 @@ main .caixa-azul .botoes button#btn2:hover{
     color: var(--backg-accent);
     background-color: var(--accent);
 }
+main #cb2{
+    padding: 15px;
+}
+main #cb2 #cards{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 18px;
 
+}
+main #cb2 #cards .card{
+    background-color: var(--backg-accent);
+    height: 280px;
+    width: 250px;
+    border-radius: 9px;
+    padding: 15px;
+    box-shadow: 1px 1px 1px #0000001e;
+}
+main #cb2 #cards .card h1{
+    color: var(--accent);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+main #cb2 #cards .card p{
+    color: var(--text);
+    text-align: left;
+    line-height: 1.3em;
+    margin-bottom: 20px;
+}
+main #cb2 #cards .card #caixa-botao{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+main #cb2 #cards .card #caixa-botao button{
+    background-color: var(--accent);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 7px;
+    color: var(--backg);
+    font-weight: bold;
+    transition: all .5s;
+}
+main #cz2{
+    background-color: var(--cor-primary);
+    height: 20vh;
+    justify-content: flex-start;
+}
+main #cz2{
+    padding: 25px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+main #cz2  #conteudo-mini-banner{
+    line-height: 37px;
+}
+main #cz2 #caixa-botao button{
+    background-color: var(--accent);
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 7px;
+    color: var(--backg);
+    font-weight: bold;
+    transition: all .5s;
+}
+main #cz2 #caixa-botao button:hover{
+    background-color: #4b6cff;
+}
+main #cb3 #cards-contactos{
+    display: flex;
+}
