@@ -3,43 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/icone-logo.jpg" type="image/x-icon"> <!--link do favicon-->
-    <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- Link para adicionar icones offline-->
-    <link rel="stylesheet" href="css/style.css"> <!--File Css externo para estilo da página-->
+    <link rel="shortcut icon" href="img/icone-logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/estilo-geral.css">
 
     <title>InovaCold</title>
 </head>
 <body>
-    <!--Início do cabeçalho do Site-->
+    <!-- ============ CABEÇALHO ============ -->
     <header>
-        <div id="logotipo">
-            <a href="index.html"><img src="img/Logotipo-simples-40-white.jpg" alt="Logotipo"></a>
-        </div>
-        <menu>
-            <a href="missao-visao.html">Missão & Visão</a>
-            <a href="#">Equipe</a>
-            <a href="#">Orçamento</a>
-            <a href="#">Casos de Sucesso</a>
-            <a href="#">InovaCursos</a>
-        </menu>
-        <div id="btn-header">
-            <a href="#"><button>Entre em contacto</button></a>
-        </div>
-    </header>
-    <!--Fim  do cabeçalho--> 
+    <div id="logotipo">
+        <a href="index.html">
+            <img src="img/Logotipo-simples-40-white.jpg" alt="Logotipo">
+        </a>
+    </div>
 
-    <!--Início do conteúdo do Site-->
+    <div id="btn-header">
+        <a href="#"><button>Entre em contacto</button></a>
+    </div>
+
+    <button id="btn-menu" aria-label="Abrir menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <menu id="menu-principal">
+        <a href="missao-visao.html">Missão & Visão</a>
+        <a href="#">Equipe</a>
+        <a href="#">Orçamento</a>
+        <a href="#">Casos de Sucesso</a>
+        <a href="#">InovaCursos</a>
+    </menu>
+</header>
+    <!-- ============ FIM CABEÇALHO ============ -->
+
+    <!-- ============ CONTEÚDO PRINCIPAL ============ -->
     <main>
+
+        <!-- HERO -->
         <section class="caixa-branca" id="cb1">
             <div class="conteudo">
-                <p>Soluções que Impulsionam seu negócio</p>
+                <p>Soluções que Impulsionam seu Negócio</p>
                 <h1>Inovando Hoje, Liderando o Futuro Digital Amanhã</h1>
                 <p id="pag-g">
-                    Na nossa empresa, oferecemos soluções tecnológicas personalizadas que ajudam as empresas a se destacarem no mercado. Nossa missão é aumentar a eficiênte e a competitividade dos nossos clientes através da inovação continua e da excelência do serviço. Junte-se a nós e descubra como podemos transformar seu negócio.
+                    Na nossa empresa, oferecemos soluções tecnológicas personalizadas que ajudam as empresas a se destacarem no mercado. Nossa missão é aumentar a eficiência e a competitividade dos nossos clientes através da inovação contínua e da excelência do serviço. Junte-se a nós e descubra como podemos transformar seu negócio.
                 </p>
             </div>
         </section>
 
+        <!-- QUEM SOMOS -->
         <section class="caixa-azul" id="cz1">
             <aside id="esquerdo">
                 <p>Conectando Inovações</p>
@@ -48,12 +59,13 @@
                     <img src="img/logo-blue-150.jpg" alt="Logo">
                 </div>
             </aside>
+
             <aside id="direito">
                 <p id="pag-g">
                     A nossa empresa é uma referência em soluções digitais, focada na transformação do ambiente empresarial em Angola. Trabalhamos com dedicação para oferecer inovações que realmente fazem a diferença. Acreditamos que a tecnologia deve ser acessível e eficiente, e é por isso que estamos sempre em busca de novas maneiras de aprimorar nossos serviços e produtos.
-                    <br>
+                    <br><br>
                     Nosso compromisso é com a credibilidade e confiança. Valorizamos as parcerias e soluções personalizadas que ajudam os nossos clientes a alcançar seus objetivos de negócios.
-                </P>
+                </p>
 
                 <div class="caixa-percentagem">
                     <div class="caixa">
@@ -69,6 +81,7 @@
                         </p>
                     </div>
                 </div>
+
                 <div class="botoes">
                     <a href="#"><button id="btn1">Saiba Mais</button></a>
                     <a href="#"><button id="btn2">Contacte-nos</button></a>
@@ -76,10 +89,11 @@
             </aside>
         </section>
 
+        <!-- CARDS DE SERVIÇOS -->
         <section class="caixa-branca" id="cb2">
             <aside id="cards">
                 <div class="card">
-                    <h1>Desenvolvimentto de Softwere</h1>
+                    <h1>Desenvolvimento de Software</h1>
                     <p>
                         Criamos soluções personalizadas em software que atendem às necessidades específicas da sua empresa.
                     </p>
@@ -87,7 +101,7 @@
                         <a href="#"><button>Saiba Mais</button></a>
                     </div>
                 </div>
-                
+
                 <div class="card">
                     <h1>Consultoria em TI</h1>
                     <p>
@@ -101,7 +115,7 @@
                 <div class="card">
                     <h1>Designer Gráfico</h1>
                     <p>
-                        Criamos soluções personalizadas em software que atendem às necessidades específicas da sua empresa.
+                        Criamos identidades visuais, logotipos e materiais gráficos que comunicam a essência da sua marca.
                     </p>
                     <div id="caixa-botao">
                         <a href="#"><button>Saiba Mais</button></a>
@@ -111,16 +125,16 @@
                 <div class="card">
                     <h1>Formação e Capacitação</h1>
                     <p>
-                        Criamos soluções personalizadas em software que atendem às necessidades específicas da sua empresa.
+                        Promovemos treinamentos e workshops que capacitam sua equipe para o uso eficaz de novas tecnologias e melhores práticas.
                     </p>
                     <div id="caixa-botao">
                         <a href="#"><button>Saiba Mais</button></a>
                     </div>
                 </div>
             </aside>
-           
         </section>
 
+        <!-- MINI BANNER -->
         <section class="caixa-azul" id="cz2">
             <div id="conteudo-mini-banner">
                 <h1>Descubra nossas Soluções inovadoras</h1>
@@ -128,10 +142,11 @@
             </div>
 
             <div id="caixa-botao">
-                <button>Saiba Mais</button>
+                <a href="#"><button>Saiba Mais</button></a>
             </div>
         </section>
 
+        <!-- CONTACTOS -->
         <section class="caixa-branca" id="cb3">
             <aside id="cards-contactos">
                 <div class="caixa-contacto">
@@ -139,19 +154,19 @@
                         <h2>Email</h2>
                         <i class="fa-solid fa-envelope"></i>
                     </div>
-                    <p>Envie suas duvídas ou comentários</p>
+                    <p>Envie suas dúvidas ou comentários.</p>
                     <p>Estamos aqui para ajudar!</p>
-                    <a href="#">Contacte@empresa.com</a>
+                    <a href="mailto:contacto@empresa.com">contacto@empresa.com</a>
                 </div>
 
                 <div class="caixa-contacto">
                     <div id="icones">
                         <h2>Telefone</h2>
-                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-phone"></i>
                     </div>
                     <p>Ligue para nós para suporte</p>
-                    <p>imediato e atendimento personalizado</p>
-                    <a href="#">(+244) 912-345-678</a>
+                    <p>imediato e atendimento personalizado.</p>
+                    <a href="tel:+244912345678">(+244) 912-345-678</a>
                 </div>
 
                 <div class="caixa-contacto">
@@ -159,28 +174,31 @@
                         <h2>WhatsApp</h2>
                         <i class="fa-brands fa-whatsapp"></i>
                     </div>
-                    <p>Fale connosco pelo whatsapp</p>
-                    <p>imediato e atendimento personalizado</p>
-                    <a href="#">(+244) 912-345-678</a>
+                    <p>Fale conosco pelo WhatsApp.</p>
+                    <p>Atendimento imediato e personalizado.</p>
+                    <a href="https://wa.me/244912345678">(+244) 912-345-678</a>
                 </div>
             </aside>
         </section>
-    </main>
-    <!--Fim  do corpo principal-->
 
-    <!--Início do rodapé do Site-->
+    </main>
+    <!-- ============ FIM CONTEÚDO ============ -->
+
+    <!-- ============ RODAPÉ ============ -->
     <footer>
         <div id="header-footer">
             <div id="logotipo">
                 <img src="img/Logotipo-simples-40-white.jpg" alt="Logotipo">
             </div>
+
             <menu>
-                <a href="#">Missão & Visão</a>
+                <a href="missao-visao.html">Missão & Visão</a>
                 <a href="#">Equipe</a>
                 <a href="#">Orçamento</a>
                 <a href="#">Casos de Sucesso</a>
                 <a href="#">InovaCursos</a>
             </menu>
+
             <div id="redes-sociais">
                 <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
                 <a href="#"><i class="fa-brands fa-facebook"></i></a>
@@ -189,14 +207,17 @@
         </div>
 
         <div id="rodape">
-            <p class="id1">&copy; 2023 InovaCold Todos os direitos reservados</p>
+            <p class="id1">&copy; 2023 InovaCold. Todos os direitos reservados.</p>
             <div class="paragrafos">
-                <p>Politíca de Privacidade</p>
+                <p>Política de Privacidade</p>
                 <p>Termos de Serviço</p>
                 <p>Configurações de Cookies</p>
             </div>
         </div>
     </footer>
-    <!--Fim  do rodape-->
+    <!-- ============ FIM RODAPÉ ============ -->
+
+    <!-- ============ SCRIPT DO MENU HAMBÚRGUER ============ -->
+   <script src="js/mobile-navbar.js"></script>
 </body>
 </html>
