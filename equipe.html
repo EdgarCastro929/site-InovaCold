@@ -3,41 +3,301 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/icone-logo.jpg" type="image/x-icon"> <!--link do favicon-->
-    <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- Link para adicionar icones offline-->
-    <link rel="stylesheet" href="css/style.css"> <!--File Css externo para estilo da página-->
+    <link rel="shortcut icon" href="img/icone-logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/global.css">
 
-    <title>InovaCold</title>
+    <title>InovaCold — Equipe</title>
+
+    <!-- ============ ESTILOS ESPECÍFICOS DA PÁGINA EQUIPE ============ -->
+    <style>
+        /* ===== HERO AZUL (#cz1) ===== */
+        main #cz1.hero-pagina {
+            display: block;
+            min-height: 35vh;
+            padding: 60px 40px;
+        }
+        main #cz1.hero-pagina h1 {
+            font-size: 2.4em;
+            margin-bottom: 20px;
+        }
+        main #cz1.hero-pagina > p {
+            max-width: 800px;
+            line-height: 1.6;
+            font-size: 1em;
+        }
+
+        /* ===== SECÇÃO BRANCA (#cb1) ===== */
+        main #cb1.conteudo-pagina {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 60px;
+            min-height: auto;
+            padding: 60px 40px;
+            background-color: var(--backg);
+        }
+
+        /* --- Bloco "Nossa Equipe / Conheça o Time" --- */
+        main #cb1 .membros-equipe {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 15px;
+            max-width: 900px;
+        }
+        main #cb1 .membros-equipe > p:first-child {
+            color: var(--text-muted);
+            font-size: 1em;
+        }
+        main #cb1 .membros-equipe > h1 {
+            color: var(--cor-secundaria);
+            font-size: 2.4em;
+            line-height: 1.2;
+        }
+        main #cb1 .membros-equipe > p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            max-width: 700px;
+        }
+
+        /* --- Grid de membros --- */
+        main #cb1 .cada-membro {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+            max-width: 1000px;
+        }
+        main #cb1 .cada-membro .membro {
+            background-color: var(--backg);
+            border: 1px solid #E5E7EB;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 240px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            transition: transform .3s, box-shadow .3s;
+        }
+        main #cb1 .cada-membro .membro:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.10);
+        }
+        main #cb1 .cada-membro .membro .imagem {
+            width: 100%;
+            height: 180px;
+            background-color: #9CA3AF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #F3F4F6;
+            font-size: .95em;
+        }
+        main #cb1 .cada-membro .membro .imagem::after {
+            content: "Image cap";
+        }
+        main #cb1 .cada-membro .membro p {
+            color: var(--cor-secundaria);
+            font-weight: bold;
+            text-align: center;
+            padding: 18px 10px;
+            font-size: 1em;
+            line-height: 1.3;
+        }
+
+        /* --- Galeria de imagens --- */
+        main #cb1 .galeria-img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 15px;
+            width: 100%;
+            max-width: 1100px;
+        }
+        main #cb1 .galeria-img h1 {
+            color: var(--cor-secundaria);
+            font-size: 2.2em;
+        }
+        main #cb1 .galeria-img > p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            max-width: 700px;
+        }
+
+        /* --- Carrossel --- */
+        #carrocel {
+            width: 100%;
+            height: 400px;
+            margin-top: 25px;
+            background-color: #6B7280;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        #carrocel .slide {
+            position: absolute;
+            inset: 0;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--backg);
+            text-align: center;
+            padding: 20px;
+        }
+        #carrocel .slide.ativo {
+            display: flex;
+        }
+        #carrocel .slide h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            opacity: .8;
+        }
+        #carrocel .slide p {
+            font-size: 1em;
+            max-width: 600px;
+            opacity: .9;
+            margin-bottom: 8px;
+        }
+        #carrocel .slide .legenda {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        /* Setas */
+        #carrocel .seta {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--backg);
+            font-size: 2.5em;
+            cursor: pointer;
+            padding: 10px 15px;
+            opacity: .8;
+            transition: opacity .3s, transform .3s;
+            z-index: 2;
+        }
+        #carrocel .seta:hover {
+            opacity: 1;
+            transform: translateY(-50%) scale(1.1);
+        }
+        #carrocel .seta.esquerda { left: 15px; }
+        #carrocel .seta.direita  { right: 15px; }
+
+        /* Indicadores (bolinhas) */
+        #carrocel .indicadores {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 2;
+        }
+        #carrocel .indicadores span {
+            display: block;
+            width: 25px;
+            height: 4px;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background-color .3s;
+            border-radius: 2px;
+        }
+        #carrocel .indicadores span.ativo {
+            background-color: var(--backg);
+        }
+
+        /* ===== RESPONSIVO ===== */
+        @media (max-width: 1024px) {
+            main #cz1.hero-pagina h1 { font-size: 2em; }
+            main #cb1 .membros-equipe > h1 { font-size: 2em; }
+            main #cb1 .galeria-img h1 { font-size: 1.9em; }
+        }
+
+        @media (max-width: 768px) {
+            main #cz1.hero-pagina {
+                padding: 40px 20px;
+                text-align: center;
+            }
+            main #cz1.hero-pagina h1 { font-size: 1.7em; }
+            main #cz1.hero-pagina > p { font-size: .95em; }
+
+            main #cb1.conteudo-pagina {
+                padding: 40px 20px;
+                gap: 40px;
+            }
+            main #cb1 .membros-equipe > h1 { font-size: 1.6em; }
+            main #cb1 .membros-equipe > p { font-size: .95em; }
+
+            main #cb1 .cada-membro {
+                gap: 20px;
+            }
+            main #cb1 .cada-membro .membro {
+                width: 100%;
+                max-width: 320px;
+            }
+
+            main #cb1 .galeria-img h1 { font-size: 1.5em; }
+            main #cb1 .galeria-img > p { font-size: .95em; }
+
+            #carrocel { height: 300px; }
+            #carrocel .slide h2 { font-size: 1.4em; }
+            #carrocel .slide p { font-size: .9em; }
+            #carrocel .seta { font-size: 2em; }
+        }
+
+        @media (max-width: 420px) {
+            main #cz1.hero-pagina h1 { font-size: 1.4em; }
+            main #cb1 .membros-equipe > h1 { font-size: 1.4em; }
+            main #cb1 .galeria-img h1 { font-size: 1.3em; }
+            #carrocel { height: 250px; }
+        }
+    </style>
 </head>
 <body>
-    <!--Início do cabeçalho do Site-->
+
+    <!-- ==================== CABEÇALHO ==================== -->
     <header>
         <div id="logotipo">
-            <a href="index.html"><img src="img/LogotipoPE-70.jpg" alt="Logotipo"></a>
+            <a href="index.html">
+                <img src="img/Logotipo-simples-40-white.jpg" alt="Logotipo">
+            </a>
         </div>
-        <menu>
+
+        <div id="btn-header">
+            <a href="#"><button>Entre em contacto</button></a>
+        </div>
+
+        <button id="btn-menu" aria-label="Abrir menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <menu id="menu-principal">
             <a href="missao-visao.html">Missão & Visão</a>
             <a href="equipe.html">Equipe</a>
             <a href="orcamento.html">Orçamento</a>
             <a href="casos-sucesso.html">Casos de Sucesso</a>
             <a href="inovacursos.html">InovaCursos</a>
         </menu>
-        <div id="btn-header">
-            <a href="#"><button>Entre em contacto</button></a>
-        </div>
     </header>
-    <!--Fim  do cabeçalho-->
 
-    <!--Início do conteúdo do Site-->
+    <!-- ==================== CONTEÚDO ==================== -->
     <main>
-        <section class="caixa-azul">
-            <h1>Conheça Nossa Equipe</h1>
-            <p>
-                Trabalhamos juntos para transformar ideias em soluções digitais.
-            </p>
+
+        <!-- HERO AZUL -->
+        <section class="caixa-azul hero-pagina" id="cz1">
+            <h1>Conheça nossa equipe</h1>
+            <p>Trabalhamos juntos para transformar ideias em soluções digitais.</p>
         </section>
 
-        <section class="caixa-branca">
+        <!-- CONTEÚDO PRINCIPAL -->
+        <section class="caixa-branca conteudo-pagina" id="cb1">
+
+            <!-- Bloco "Conheça o Time" + Membros -->
             <aside class="membros-equipe">
                 <p>Nossa Equipe</p>
                 <h1>Conheça o Time</h1>
@@ -48,57 +308,93 @@
                 <div class="cada-membro">
                     <div class="membro">
                         <div class="imagem"></div>
-                        <p>Isildo Rodrigues Dala</p>
+                        <p>Isildo<br>Rodrigues Dala</p>
                     </div>
 
                     <div class="membro">
                         <div class="imagem"></div>
-                        <p>Jorge Andrade Da Silva</p>
+                        <p>Jorge Andrade<br>Da Silva</p>
                     </div>
 
                     <div class="membro">
                         <div class="imagem"></div>
-                        <p>Edgar Castro Mangunza</p>
+                        <p>Edgar Castro<br>Mangunza</p>
                     </div>
 
                     <div class="membro">
                         <div class="imagem"></div>
-                        <p>Saladine A. C. Cuaia</p>
+                        <p>Saladine<br>Augusto<br>Contreira Cuaia</p>
                     </div>
 
                     <div class="membro">
                         <div class="imagem"></div>
-                        <p>Derivaldo Garcia</p>
+                        <p>Derivaldo<br>Garcia</p>
                     </div>
                 </div>
             </aside>
 
+            <!-- Galeria de Imagens -->
             <aside class="galeria-img">
                 <h1>Galeria de Imagens</h1>
                 <p>
                     Explore nossas fotos que refletem a energia e a colaboração da nossa equipe em eventos e atividades.
                 </p>
 
-                <div id="carrocel"></div>
-            </aside>
-        </section>
-       
-    </main>
-    <!--Fim  do corpo principal-->
+                <div id="carrocel">
+                    <div class="slide ativo">
+                        <h2>First slide</h2>
+                        <p class="legenda">First slide label</p>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </div>
 
-    <!--Início do rodapé do Site-->
+                    <div class="slide">
+                        <h2>Second slide</h2>
+                        <p class="legenda">Second slide label</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+
+                    <div class="slide">
+                        <h2>Third slide</h2>
+                        <p class="legenda">Third slide label</p>
+                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    </div>
+
+                    <!-- Setas -->
+                    <button class="seta esquerda" aria-label="Slide anterior">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="seta direita" aria-label="Próximo slide">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                    <!-- Indicadores -->
+                    <div class="indicadores">
+                        <span class="ativo" data-slide="0"></span>
+                        <span data-slide="1"></span>
+                        <span data-slide="2"></span>
+                    </div>
+                </div>
+            </aside>
+
+        </section>
+
+    </main>
+
+    <!-- ==================== RODAPÉ ==================== -->
     <footer>
         <div id="header-footer">
             <div id="logotipo">
                 <img src="img/Logotipo-simples-40-white.jpg" alt="Logotipo">
             </div>
+
             <menu>
-                <a href="#">Missão & Visão</a>
-                <a href="#">Equipe</a>
-                <a href="#">Orçamento</a>
-                <a href="#">Casos de Sucesso</a>
-                <a href="#">InovaCursos</a>
+                <a href="missao-visao.html">Missão & Visão</a>
+                <a href="equipe.html">Equipe</a>
+                <a href="orcamento.html">Orçamento</a>
+                <a href="casos-sucesso.html">Casos de Sucesso</a>
+                <a href="inovacursos.html">InovaCursos</a>
             </menu>
+
             <div id="redes-sociais">
                 <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
                 <a href="#"><i class="fa-brands fa-facebook"></i></a>
@@ -107,14 +403,101 @@
         </div>
 
         <div id="rodape">
-            <p class="id1">&copy; 2023 InovaCold Todos os direitos reservados</p>
+            <p class="id1">&copy; 2023 InovaCold. Todos os direitos reservados.</p>
             <div class="paragrafos">
-                <p>Politíca de Privacidade</p>
+                <p>Política de Privacidade</p>
                 <p>Termos de Serviço</p>
                 <p>Configurações de Cookies</p>
             </div>
         </div>
     </footer>
-    <!--Fim  do rodape-->
+
+    <!-- ==================== SCRIPT: MENU + CARROSSEL ==================== -->
+    <script>
+        /* ===== MENU HAMBÚRGUER ===== */
+        const btnMenu = document.getElementById('btn-menu');
+        const menuPrincipal = document.getElementById('menu-principal');
+
+        btnMenu.addEventListener('click', () => {
+            menuPrincipal.classList.toggle('aberto');
+            const icone = btnMenu.querySelector('i');
+            if (menuPrincipal.classList.contains('aberto')) {
+                icone.classList.remove('fa-bars');
+                icone.classList.add('fa-xmark');
+            } else {
+                icone.classList.remove('fa-xmark');
+                icone.classList.add('fa-bars');
+            }
+        });
+
+        menuPrincipal.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    menuPrincipal.classList.remove('aberto');
+                    const icone = btnMenu.querySelector('i');
+                    icone.classList.remove('fa-xmark');
+                    icone.classList.add('fa-bars');
+                }
+            });
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                menuPrincipal.classList.remove('aberto');
+                const icone = btnMenu.querySelector('i');
+                icone.classList.remove('fa-xmark');
+                icone.classList.add('fa-bars');
+            }
+        });
+
+        /* ===== CARROSSEL ===== */
+        const slides = document.querySelectorAll('#carrocel .slide');
+        const indicadores = document.querySelectorAll('#carrocel .indicadores span');
+        const btnAnterior = document.querySelector('#carrocel .seta.esquerda');
+        const btnProximo  = document.querySelector('#carrocel .seta.direita');
+        let slideAtual = 0;
+        let autoplay;
+
+        function mostrarSlide(indice) {
+            // Remove ativo de todos
+            slides.forEach(s => s.classList.remove('ativo'));
+            indicadores.forEach(i => i.classList.remove('ativo'));
+
+            // Garante índice válido
+            slideAtual = (indice + slides.length) % slides.length;
+
+            slides[slideAtual].classList.add('ativo');
+            indicadores[slideAtual].classList.add('ativo');
+        }
+
+        function proximoSlide() { mostrarSlide(slideAtual + 1); }
+        function slideAnterior() { mostrarSlide(slideAtual - 1); }
+
+        btnProximo.addEventListener('click', () => {
+            proximoSlide();
+            reiniciarAutoplay();
+        });
+        btnAnterior.addEventListener('click', () => {
+            slideAnterior();
+            reiniciarAutoplay();
+        });
+
+        indicadores.forEach(bolinha => {
+            bolinha.addEventListener('click', () => {
+                mostrarSlide(parseInt(bolinha.dataset.slide));
+                reiniciarAutoplay();
+            });
+        });
+
+        function iniciarAutoplay() {
+            autoplay = setInterval(proximoSlide, 5000);
+        }
+        function reiniciarAutoplay() {
+            clearInterval(autoplay);
+            iniciarAutoplay();
+        }
+
+        iniciarAutoplay();
+    </script>
 </body>
 </html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icone-logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/global.css">
+
+    <title>InovaCold — InovaCursos</title>
+
+    <!-- ============ ESTILOS ESPECÍFICOS ============ -->
+    <style>
+        /* ===== HERO AZUL (#cz1) ===== */
+        main #cz1.hero-pagina {
+            display: block;
+            min-height: 45vh;
+            padding: 80px 40px;
+            text-align: left;
+        }
+        main #cz1.hero-pagina h1 {
+            font-size: 3em;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            max-width: 900px;
+        }
+        main #cz1.hero-pagina > p {
+            max-width: 700px;
+            line-height: 1.7;
+            font-size: 1.1em;
+        }
+
+        /* ===== SECÇÃO BRANCA (#cb1) ===== */
+        main #cb1.conteudo-pagina {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+            padding: 70px 40px;
+            min-height: auto;
+            background-color: var(--backg);
+        }
+        main #cb1.conteudo-pagina h1 {
+            color: var(--cor-secundaria);
+            font-size: 2.6em;
+            line-height: 1.2;
+            max-width: 900px;
+        }
+        main #cb1.conteudo-pagina > p {
+            color: var(--text-muted);
+            line-height: 1.8;
+            font-size: 1em;
+            max-width: 700px;
+            text-align: left;
+            margin-top: 15px;
+        }
+        main #cb1.conteudo-pagina ul {
+            list-style-position: inside;
+            text-align: left;
+            color: var(--text-muted);
+            line-height: 2;
+            font-size: 1em;
+            max-width: 700px;
+            margin-top: 5px;
+            padding-left: 10px;
+        }
+        main #cb1.conteudo-pagina ul li {
+            padding-left: 5px;
+        }
+
+        /* ===== BOTÃO CENTRAL ===== */
+        main #botao-central {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 40px 80px;
+            background-color: var(--backg);
+        }
+        main #botao-central button {
+            background-color: var(--accent);
+            color: var(--backg);
+            border: none;
+            padding: 16px 60px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 1.15em;
+            cursor: pointer;
+            transition: all .3s;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+        }
+        main #botao-central button:hover {
+            background-color: var(--cor-secundaria);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(59, 130, 246, 0.35);
+        }
+
+        /* ===== RESPONSIVO ===== */
+        @media (max-width: 1024px) {
+            main #cz1.hero-pagina h1 { font-size: 2.5em; }
+            main #cb1.conteudo-pagina h1 { font-size: 2.2em; }
+        }
+
+        @media (max-width: 768px) {
+            main #cz1.hero-pagina {
+                padding: 50px 20px;
+                text-align: center;
+            }
+            main #cz1.hero-pagina h1 { font-size: 2em; }
+            main #cz1.hero-pagina > p { font-size: 1em; }
+
+            main #cb1.conteudo-pagina {
+                padding: 50px 20px;
+            }
+            main #cb1.conteudo-pagina h1 { font-size: 1.7em; }
+            main #cb1.conteudo-pagina > p {
+                text-align: center;
+                font-size: .95em;
+            }
+            main #cb1.conteudo-pagina ul {
+                text-align: left;
+                display: inline-block;
+                font-size: .95em;
+            }
+
+            main #botao-central { padding: 0 20px 60px; }
+            main #botao-central button {
+                padding: 14px 45px;
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 420px) {
+            main #cz1.hero-pagina h1 { font-size: 1.6em; }
+            main #cb1.conteudo-pagina h1 { font-size: 1.4em; }
+            main #botao-central button {
+                padding: 13px 35px;
+                font-size: .95em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== CABEÇALHO ==================== -->
+    <header>
+        <div id="logotipo">
+            <a href="index.html">
+                <img src="img/Logotipo-simples-40-white.jpg" alt="Logotipo">
+            </a>
+        </div>
+
+        <div id="btn-header">
+            <a href="#"><button>Entre em contacto</button></a>
+        </div>
+
+        <button id="btn-menu" aria-label="Abrir menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <menu id="menu-principal">
+            <a href="missao-visao.html">Missão & Visão</a>
+            <a href="equipe.html">Equipe</a>
+            <a href="orcamento.html">Orçamento</a>
+            <a href="casos-sucesso.html">Casos de Sucesso</a>
+            <a href="inovacursos.html">InovaCursos</a>
+        </menu>
+    </header>
+
+    <!-- ==================== CONTEÚDO ==================== -->
+    <main>
+
+        <!-- HERO AZUL -->
+        <section class="caixa-azul hero-pagina" id="cz1">
+            <h1>Exploração de Conhecimento</h1>
+            <p>
+                Descubra nosso material educativo e artigos que impulsionam seu aprendizado.
+            </p>
+        </section>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <section class="caixa-branca conteudo-pagina" id="cb1">
+            <h1>Acesse a Plataforma do InovaCursos</h1>
+            <p>
+                A InovaCursos é um projeto educacional da empresa InovaCold, especializada em Tecnologia da Informação, Design Gráfico e Marketing Digital. Criada com o objetivo de promover a inclusão digital em Angola, a InovaCursos oferece formações estruturadas nas áreas de Tecnologia, com foco em aulas ao domicílio e online.
+                <br><br>
+                Nosso modelo combina:
+            </p>
+            <ul>
+                <li>Formação prática</li>
+                <li>Acompanhamento personalizado</li>
+                <li>Metodologia moderna</li>
+                <li>Material didático próprio</li>
+                <li>Certificação</li>
+            </ul>
+        </section>
+
+        <!-- BOTÃO CENTRAL -->
+        <div id="botao-central">
+            <a href="#"><button>InovaCursos</button></a>
+        </div>
+
+    </main>
+
+    <!-- ==================== RODAPÉ ==================== -->
+    <footer>
+        <div id="header-footer">
+            <div id="logotipo">
+                <img src="img/Logotipo-simples-40-white.jpg" alt="Logotipo">
+            </div>
+
+            <menu>
+                <a href="missao-visao.html">Missão & Visão</a>
+                <a href="equipe.html">Equipe</a>
+                <a href="orcamento.html">Orçamento</a>
+                <a href="casos-sucesso.html">Casos de Sucesso</a>
+                <a href="inovacursos.html">InovaCursos</a>
+            </menu>
+
+            <div id="redes-sociais">
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div id="rodape">
+            <p class="id1">&copy; 2023 InovaCold. Todos os direitos reservados.</p>
+            <div class="paragrafos">
+                <p>Política de Privacidade</p>
+                <p>Termos de Serviço</p>
+                <p>Configurações de Cookies</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPT: MENU HAMBÚRGUER ==================== -->
+    <script>
+        const btnMenu = document.getElementById('btn-menu');
+        const menuPrincipal = document.getElementById('menu-principal');
+
+        btnMenu.addEventListener('click', () => {
+            menuPrincipal.classList.toggle('aberto');
+            const icone = btnMenu.querySelector('i');
+            if (menuPrincipal.classList.contains('aberto')) {
+                icone.classList.remove('fa-bars');
+                icone.classList.add('fa-xmark');
+            } else {
+                icone.classList.remove('fa-xmark');
+                icone.classList.add('fa-bars');
+            }
+        });
+
+        menuPrincipal.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    menuPrincipal.classList.remove('aberto');
+                    const icone = btnMenu.querySelector('i');
+                    icone.classList.remove('fa-xmark');
+                    icone.classList.add('fa-bars');
+                }
+            });
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                menuPrincipal.classList.remove('aberto');
+                const icone = btnMenu.querySelector('i');
+                icone.classList.remove('fa-xmark');
+                icone.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+</html>

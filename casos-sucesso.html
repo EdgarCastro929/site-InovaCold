@@ -3,47 +3,552 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/icone-logo.jpg" type="image/x-icon"> <!--link do favicon-->
-    <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- Link para adicionar icones offline-->
-    <link rel="stylesheet" href="css/style.css"> <!--File Css externo para estilo da página-->
+    <link rel="shortcut icon" href="img/icone-logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/global.css">
 
-    <title>InovaCold</title>
+    <title>InovaCold — Casos de Sucesso</title>
+
+    <!-- ============ ESTILOS ESPECÍFICOS ============ -->
+    <style>
+        /* ===== HERO AZUL (#cz1) ===== */
+        main #cz1.hero-pagina {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            min-height: 35vh;
+            padding: 60px 40px;
+            flex-wrap: wrap;
+        }
+        main #cz1.hero-pagina h1 {
+            font-size: 2.4em;
+            line-height: 1.2;
+            flex: 1;
+            min-width: 280px;
+        }
+        main #cz1.hero-pagina p {
+            flex: 1;
+            min-width: 280px;
+            line-height: 1.7;
+            font-size: 1em;
+            max-width: 600px;
+        }
+
+        /* ===== SECÇÃO PROJETO (#cb1) ===== */
+        main #cb1.projeto-info {
+            display: flex;
+            justify-content: space-between;
+            gap: 60px;
+            padding: 60px 40px;
+            flex-wrap: wrap;
+            min-height: auto;
+            background-color: var(--backg);
+        }
+        main #cb1.projeto-info .caixa-lateral {
+            flex: 1;
+            min-width: 280px;
+        }
+        main #cb1.projeto-info .caixa-lateral h1 {
+            color: var(--cor-secundaria);
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+        main #cb1.projeto-info .caixa-lateral .caixa-conteudo p {
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+        main #cb1.projeto-info .caixa-lateral .caixa-opcoes {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        main #cb1.projeto-info .caixa-lateral .caixa-opcoes button {
+            padding: 10px 22px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: .95em;
+            cursor: pointer;
+            transition: all .3s;
+            background-color: transparent;
+            color: var(--accent);
+            border: 2px solid #E5E7EB;
+        }
+        main #cb1.projeto-info .caixa-lateral .caixa-opcoes button:hover {
+            border-color: var(--accent);
+            background-color: rgba(59, 130, 246, 0.06);
+        }
+
+        /* Coluna da direita (Cliente / Data / Função / Website) */
+        main #cb1.projeto-info .caixa-lateral.dados {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        main #cb1.projeto-info .caixa-categoria {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            flex: 1;
+            min-width: 140px;
+        }
+        main #cb1.projeto-info .caixa-categoria p {
+            color: var(--text-muted);
+            font-size: .95em;
+            line-height: 1.5;
+        }
+        main #cb1.projeto-info .caixa-categoria p.codigo {
+            color: var(--cor-secundaria);
+            font-weight: bold;
+            font-size: 1.05em;
+            margin-top: 15px;
+        }
+        main #cb1.projeto-info .caixa-categoria p.codigo:first-child { margin-top: 0; }
+
+        /* ===== GALERIA / CARROSSEL (#cb-galeria) ===== */
+        main #cb-galeria {
+            background-color: var(--backg);
+            padding: 0 40px 60px;
+            min-height: auto;
+            display: block;
+        }
+        main #cb-galeria #galeria,
+        main #cb-galeria-projetos #galeria {
+            width: 100%;
+            max-width: 1100px;
+            height: 400px;
+            margin: 0 auto;
+            background-color: #6B7280;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        main #cb-galeria .slide,
+        main #cb-galeria-projetos .slide {
+            position: absolute;
+            inset: 0;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--backg);
+            text-align: center;
+            padding: 20px;
+        }
+        main #cb-galeria .slide.ativo,
+        main #cb-galeria-projetos .slide.ativo { display: flex; }
+
+        main #cb-galeria .slide h2,
+        main #cb-galeria-projetos .slide h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            opacity: .8;
+        }
+        main #cb-galeria .slide p,
+        main #cb-galeria-projetos .slide p {
+            font-size: 1em;
+            max-width: 600px;
+            opacity: .9;
+            margin-bottom: 8px;
+        }
+        main #cb-galeria .slide .legenda,
+        main #cb-galeria-projetos .slide .legenda {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        /* Setas */
+        main #cb-galeria .seta,
+        main #cb-galeria-projetos .seta {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--backg);
+            font-size: 2.5em;
+            cursor: pointer;
+            padding: 10px 15px;
+            opacity: .8;
+            transition: opacity .3s, transform .3s;
+            z-index: 2;
+        }
+        main #cb-galeria .seta:hover,
+        main #cb-galeria-projetos .seta:hover {
+            opacity: 1;
+            transform: translateY(-50%) scale(1.1);
+        }
+        main #cb-galeria .seta.esquerda,
+        main #cb-galeria-projetos .seta.esquerda { left: 15px; }
+        main #cb-galeria .seta.direita,
+        main #cb-galeria-projetos .seta.direita  { right: 15px; }
+
+        /* Indicadores */
+        main #cb-galeria .indicadores,
+        main #cb-galeria-projetos .indicadores {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 2;
+        }
+        main #cb-galeria .indicadores span,
+        main #cb-galeria-projetos .indicadores span {
+            display: block;
+            width: 25px;
+            height: 4px;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background-color .3s;
+            border-radius: 2px;
+        }
+        main #cb-galeria .indicadores span.ativo,
+        main #cb-galeria-projetos .indicadores span.ativo {
+            background-color: var(--backg);
+        }
+
+        /* ===== CLIENTES SATISFEITOS (#cz2) ===== */
+        main #cz2.clientes {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 50px;
+            padding: 60px 40px;
+            flex-wrap: wrap;
+            min-height: auto;
+        }
+        main #cz2.clientes > h1 {
+            font-size: 2.2em;
+            line-height: 1.2;
+            flex: 1;
+            min-width: 250px;
+            max-width: 400px;
+        }
+        main #cz2.clientes .caixa-dupla {
+            display: flex;
+            gap: 30px;
+            flex: 2;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        main #cz2.clientes .caixa-1 {
+            background-color: var(--backg);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+            transition: transform .3s;
+        }
+        main #cz2.clientes .caixa-1:hover { transform: translateY(-5px); }
+        main #cz2.clientes .caixa-1 #image-cap {
+            background-color: #9CA3AF;
+            height: 160px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #F3F4F6;
+            font-size: .95em;
+        }
+        main #cz2.clientes .caixa-1 #image-cap::after { content: "Image cap"; }
+        main #cz2.clientes .caixa-1 #descricao {
+            padding: 20px;
+        }
+        main #cz2.clientes .caixa-1 #descricao p {
+            color: var(--text-muted);
+            font-size: .9em;
+            line-height: 1.5;
+        }
+
+        /* ===== PASSOS (#cb2) ===== */
+        main #cb2.passos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 60px;
+            padding: 60px 40px;
+            min-height: auto;
+            background-color: var(--backg);
+            flex-wrap: wrap;
+        }
+        main #cb2.passos article {
+            flex: 1;
+            min-width: 280px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        main #cb2.passos article .passo {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+        main #cb2.passos article .passo > i {
+            color: var(--accent);
+            font-size: 1.5em;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+        main #cb2.passos article .passo h1 {
+            color: var(--cor-secundaria);
+            font-size: 1.2em;
+            margin-bottom: 6px;
+        }
+        main #cb2.passos article .passo p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-size: .95em;
+        }
+        /* Imagem decorativa laranja */
+        main #cb2.passos #imagem {
+            flex: 1;
+            min-width: 280px;
+            max-width: 400px;
+            height: 320px;
+            border: 6px solid #F97316;
+            border-radius: 8px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+        main #cb2.passos #imagem::before {
+            content: "";
+            position: absolute;
+            top: 40px;
+            left: 60px;
+            width: 60px;
+            height: 60px;
+            border: 6px solid #F97316;
+            border-radius: 50%;
+        }
+        main #cb2.passos #imagem::after {
+            content: "";
+            position: absolute;
+            bottom: 40px;
+            right: 60px;
+            width: 0;
+            height: 0;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+            border-bottom: 90px solid #F97316;
+        }
+
+        /* ===== CTA AZUL + BRANCO (#cz-cta) ===== */
+        main #cz-cta {
+            display: flex;
+            flex-wrap: wrap;
+            min-height: 40vh;
+        }
+        main #cz-cta .lado-azul {
+            background-color: var(--cor-primary);
+            color: var(--backg);
+            flex: 1;
+            min-width: 300px;
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+        }
+        main #cz-cta .lado-azul > p {
+            font-size: 1em;
+            opacity: .9;
+        }
+        main #cz-cta .lado-azul h1 {
+            font-size: 2.2em;
+            line-height: 1.3;
+        }
+        main #cz-cta .lado-azul a button {
+            background-color: transparent;
+            border: 2px solid var(--backg);
+            color: var(--backg);
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all .3s;
+            margin-top: 10px;
+            width: fit-content;
+        }
+        main #cz-cta .lado-azul a button:hover {
+            background-color: var(--backg);
+            color: var(--cor-primary);
+        }
+        main #cz-cta .lado-branco {
+            background-color: var(--backg);
+            flex: 1;
+            min-width: 300px;
+            padding: 60px 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main #cz-cta .lado-branco h1 {
+            color: var(--cor-primary);
+            font-size: 3em;
+            font-weight: bold;
+        }
+
+        /* ===== GALERIA DE PROJETOS (#cb-galeria-projetos) ===== */
+        main #cb-galeria-projetos {
+            background-color: var(--backg);
+            padding: 60px 40px;
+            min-height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+        main #cb-galeria-projetos h1 {
+            color: var(--cor-secundaria);
+            font-size: 2.2em;
+        }
+        main #cb-galeria-projetos > p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* ===== RESPONSIVO ===== */
+        @media (max-width: 1024px) {
+            main #cz1.hero-pagina h1 { font-size: 2em; }
+            main #cb1.projeto-info .caixa-lateral h1 { font-size: 1.9em; }
+            main #cz2.clientes > h1 { font-size: 1.9em; }
+            main #cz-cta .lado-azul h1 { font-size: 1.9em; }
+            main #cz-cta .lado-branco h1 { font-size: 2.4em; }
+            main #cb-galeria-projetos h1 { font-size: 1.9em; }
+        }
+
+        @media (max-width: 768px) {
+            main #cz1.hero-pagina {
+                flex-direction: column;
+                padding: 40px 20px;
+                text-align: center;
+            }
+            main #cz1.hero-pagina h1 { font-size: 1.7em; }
+            main #cz1.hero-pagina p { font-size: .95em; }
+
+            main #cb1.projeto-info {
+                flex-direction: column;
+                padding: 40px 20px;
+                gap: 30px;
+            }
+            main #cb1.projeto-info .caixa-lateral h1 {
+                font-size: 1.6em;
+                text-align: center;
+            }
+            main #cb1.projeto-info .caixa-lateral .caixa-conteudo p {
+                text-align: center;
+            }
+            main #cb1.projeto-info .caixa-lateral .caixa-opcoes {
+                justify-content: center;
+            }
+            main #cb1.projeto-info .caixa-lateral.dados {
+                justify-content: center;
+                text-align: center;
+            }
+
+            main #cb-galeria { padding: 0 20px 40px; }
+            main #cb-galeria #galeria,
+            main #cb-galeria-projetos #galeria {
+                height: 280px;
+            }
+
+            main #cz2.clientes {
+                flex-direction: column;
+                padding: 40px 20px;
+                gap: 30px;
+            }
+            main #cz2.clientes > h1 {
+                font-size: 1.6em;
+                text-align: center;
+            }
+
+            main #cb2.passos {
+                flex-direction: column;
+                padding: 40px 20px;
+                gap: 40px;
+            }
+            main #cb2.passos #imagem { height: 250px; max-width: 320px; }
+
+            main #cz-cta { flex-direction: column; }
+            main #cz-cta .lado-azul {
+                padding: 50px 25px;
+                text-align: center;
+                align-items: center;
+            }
+            main #cz-cta .lado-azul h1 { font-size: 1.6em; }
+            main #cz-cta .lado-branco { padding: 50px 25px; }
+            main #cz-cta .lado-branco h1 { font-size: 2em; }
+
+            main #cb-galeria-projetos { padding: 40px 20px; }
+            main #cb-galeria-projetos h1 { font-size: 1.6em; }
+        }
+
+        @media (max-width: 420px) {
+            main #cz1.hero-pagina h1 { font-size: 1.4em; }
+            main #cb1.projeto-info .caixa-lateral h1 { font-size: 1.4em; }
+            main #cz2.clientes > h1 { font-size: 1.4em; }
+            main #cz-cta .lado-azul h1 { font-size: 1.4em; }
+            main #cz-cta .lado-branco h1 { font-size: 1.7em; }
+            main #cb-galeria-projetos h1 { font-size: 1.4em; }
+        }
+    </style>
 </head>
 <body>
-    <!--Início do cabeçalho do Site-->
+
+    <!-- ==================== CABEÇALHO ==================== -->
     <header>
         <div id="logotipo">
-            <a href="index.html"><img src="img/LogotipoPE-70.jpg" alt="Logotipo"></a>
+            <a href="index.html">
+                <img src="img/Logotipo-simples-40-white.jpg" alt="Logotipo">
+            </a>
         </div>
-        <menu>
+
+        <div id="btn-header">
+            <a href="#"><button>Entre em contacto</button></a>
+        </div>
+
+        <button id="btn-menu" aria-label="Abrir menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <menu id="menu-principal">
             <a href="missao-visao.html">Missão & Visão</a>
             <a href="equipe.html">Equipe</a>
             <a href="orcamento.html">Orçamento</a>
             <a href="casos-sucesso.html">Casos de Sucesso</a>
             <a href="inovacursos.html">InovaCursos</a>
         </menu>
-        <div id="btn-header">
-            <a href="#"><button>Entre em contacto</button></a>
-        </div>
     </header>
-    <!--Fim  do cabeçalho-->
 
-    <!--Início do conteúdo do Site-->
+    <!-- ==================== CONTEÚDO ==================== -->
     <main>
-        <section class="caixa-azul">
-            <h1>Casos de Sucesso InovaCold</h1>
+
+        <!-- HERO AZUL -->
+        <section class="caixa-azul hero-pagina" id="cz1">
+            <h1>Casos de Sucesso<br>InovaCold</h1>
             <p>
                 Na InovaCold, trabalhamos para transformar ideias em resultados reais. Nossos projetos de tecnologia digital têm impactado positivamente empresas em diversos setores, ajudando-as a alcançar sua plena eficiência e competitividade no mercado. Nesta seção, você encontrará exemplos inspiradores de como nossas soluções têm gerado sucesso e inovação. Junte-se a nós e descubra um mundo de possibilidades para o seu negócio.
             </p>
         </section>
 
-        <section class="caixa-branca">
+        <!-- PROJETO INFO -->
+        <section class="caixa-branca projeto-info" id="cb1">
 
             <aside class="caixa-lateral">
                 <h1>Nome do Projeto</h1>
                 <div class="caixa-conteudo">
                     <p>
-                        Na nossa empresa, temos o compromisso de oferecer soluções tecnológicas que agreguem valor aos nossos clientes e à sociedade. Acreditamos que a inovação é a chave para transformar desafios em oportunidades. Nosso objetivo é proporcionar ferramentas que facilitem o trabalho dos empresários e gestores, promovendo eficiência e competitividade no mercado.
+                        Uma breve descrição do projeto que destaca sua importância e impacto. Projetado para resolver problemas específicos e agregar valor aos nossos clientes.
                     </p>
                     <div class="caixa-opcoes">
                         <a href="#"><button>Saiba Mais</button></a>
@@ -52,102 +557,171 @@
                     </div>
                 </div>
             </aside>
-            
-            <aside class="caixa-lateral">
-                 <div class="caixa-categoria">
-                    <p class="codigo">Clinte</p>
+
+            <aside class="caixa-lateral dados">
+                <div class="caixa-categoria">
+                    <p class="codigo">Cliente</p>
                     <p>Nome Completo</p>
                     <p class="codigo">Função</p>
                     <p>Nome da Função</p>
-                 </div>
-                 <div class="caixa-categoria">
+                </div>
+                <div class="caixa-categoria">
                     <p class="codigo">Data</p>
                     <p>Agosto de 2023</p>
                     <p class="codigo">Website</p>
                     <p>seu domínio</p>
-                 </div>
+                </div>
             </aside>
-              
+
         </section>
 
-        <section class="caixa-branca">
-            <div id="galeria"></div>
+        <!-- GALERIA (1) -->
+        <section id="cb-galeria">
+            <div id="galeria">
+                <div class="slide ativo">
+                    <h2>First slide</h2>
+                    <p class="legenda">First slide label</p>
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </div>
+                <div class="slide">
+                    <h2>Second slide</h2>
+                    <p class="legenda">Second slide label</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="slide">
+                    <h2>Third slide</h2>
+                    <p class="legenda">Third slide label</p>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+
+                <button class="seta esquerda" aria-label="Slide anterior">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="seta direita" aria-label="Próximo slide">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <div class="indicadores">
+                    <span class="ativo" data-slide="0"></span>
+                    <span data-slide="1"></span>
+                    <span data-slide="2"></span>
+                </div>
+            </div>
         </section>
 
-        <section class="caixa-azul">
-            <h1>Nossos clientes satisfeitos</h1>
+        <!-- CLIENTES SATISFEITOS -->
+        <section class="caixa-azul clientes" id="cz2">
+            <h1>Nossos<br>clientes<br>satisfeitos</h1>
             <div class="caixa-dupla">
                 <div class="caixa-1">
                     <div id="image-cap"></div>
                     <div id="descricao">
-                        <p>
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
+                        <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
                 <div class="caixa-1">
                     <div id="image-cap"></div>
                     <div id="descricao">
-                        <p>
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
+                        <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
             </div>
         </section>
-       
-        <section class="caixa-branca">
+
+        <!-- PASSOS -->
+        <section class="caixa-branca passos" id="cb2">
             <article>
-                <h1>Identificação das Necessidades</h1>
-                <p>
-                    O primeiro passo é compreender as necessidades do cliente. Realizamos uma análise aprofundada para identificar desafios e oportunidades.
-                </p>
-                <br>
-                <h1>Elaboração da Solução</h1>
-                <p>
-                    Após a análise, desenvolvemos uma solução personalizada. Nossos especialistas colocam em prática ideias inovadoras para atender às demandas.
-                </p>
-                <br>
-                <h1>Implementação e Apoio</h1>
-                <p>
-                    Com tudo pronto, executamos a implementação da solução e oferecemos suporte contínuo. Estamos ao lado do cliente para garantir o sucesso.
-                </p>
+                <div class="passo">
+                    <i class="fa-solid fa-star"></i>
+                    <div>
+                        <h1>Identificação das Necessidades</h1>
+                        <p>O primeiro passo é compreender as necessidades do cliente. Realizamos uma análise aprofundada para identificar desafios e oportunidades.</p>
+                    </div>
+                </div>
+                <div class="passo">
+                    <i class="fa-solid fa-star"></i>
+                    <div>
+                        <h1>Elaboração da Solução</h1>
+                        <p>Após a análise, desenvolvemos uma solução personalizada. Nossos especialistas colocam em prática ideias inovadoras para atender às demandas.</p>
+                    </div>
+                </div>
+                <div class="passo">
+                    <i class="fa-solid fa-star"></i>
+                    <div>
+                        <h1>Implementação e Apoio</h1>
+                        <p>Com tudo pronto, executamos a implementação da solução e oferecemos suporte contínuo. Estamos ao lado do cliente para garantir o sucesso.</p>
+                    </div>
+                </div>
             </article>
             <div id="imagem"></div>
         </section>
 
-        <section class="caixa-azulbranco">
-            <div class="caixa-azul">
+        <!-- CTA AZUL + BRANCO -->
+        <section id="cz-cta">
+            <div class="lado-azul">
                 <p>Inovando Hoje, Liderando o Futuro Digital Amanhã</p>
                 <h1>Entre em contato e transforme suas ideias em realidade.</h1>
-                <a href="#"><button>Fale connosco</button></a>
+                <a href="#"><button>Fale conosco</button></a>
             </div>
-            <div class="caixa-branca">
+            <div class="lado-branco">
                 <h1>InovaCold</h1>
             </div>
         </section>
 
-        <div class="caixa-branca">
+        <!-- GALERIA DE PROJETOS (2) -->
+        <section id="cb-galeria-projetos">
             <h1>Galeria de Projetos</h1>
-            <p>Descubra nossos projetos e o impacto que geraram no mercado</p>
-            <div id="galeria"></div>
-        </div>
-    </main>
-    <!--Fim  do corpo principal-->
+            <p>Descubra nossos projetos finalizados e o impacto que geraram no mercado.</p>
 
-    <!--Início do rodapé do Site-->
+            <div id="galeria">
+                <div class="slide ativo">
+                    <h2>First slide</h2>
+                    <p class="legenda">First slide label</p>
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </div>
+                <div class="slide">
+                    <h2>Second slide</h2>
+                    <p class="legenda">Second slide label</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="slide">
+                    <h2>Third slide</h2>
+                    <p class="legenda">Third slide label</p>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+
+                <button class="seta esquerda" aria-label="Slide anterior">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="seta direita" aria-label="Próximo slide">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <div class="indicadores">
+                    <span class="ativo" data-slide="0"></span>
+                    <span data-slide="1"></span>
+                    <span data-slide="2"></span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== RODAPÉ ==================== -->
     <footer>
         <div id="header-footer">
             <div id="logotipo">
                 <img src="img/Logotipo-simples-40-white.jpg" alt="Logotipo">
             </div>
+
             <menu>
-                <a href="#">Missão & Visão</a>
-                <a href="#">Equipe</a>
-                <a href="#">Orçamento</a>
-                <a href="#">Casos de Sucesso</a>
-                <a href="#">InovaCursos</a>
+                <a href="missao-visao.html">Missão & Visão</a>
+                <a href="equipe.html">Equipe</a>
+                <a href="orcamento.html">Orçamento</a>
+                <a href="casos-sucesso.html">Casos de Sucesso</a>
+                <a href="inovacursos.html">InovaCursos</a>
             </menu>
+
             <div id="redes-sociais">
                 <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
                 <a href="#"><i class="fa-brands fa-facebook"></i></a>
@@ -156,14 +730,121 @@
         </div>
 
         <div id="rodape">
-            <p class="id1">&copy; 2023 InovaCold Todos os direitos reservados</p>
+            <p class="id1">&copy; 2023 InovaCold. Todos os direitos reservados.</p>
             <div class="paragrafos">
-                <p>Politíca de Privacidade</p>
+                <p>Política de Privacidade</p>
                 <p>Termos de Serviço</p>
                 <p>Configurações de Cookies</p>
             </div>
         </div>
     </footer>
-    <!--Fim  do rodape-->
+
+    <!-- ==================== SCRIPT: MENU + CARROSSÉIS ==================== -->
+    <script>
+        /* ===== MENU HAMBÚRGUER ===== */
+        const btnMenu = document.getElementById('btn-menu');
+        const menuPrincipal = document.getElementById('menu-principal');
+
+        btnMenu.addEventListener('click', () => {
+            menuPrincipal.classList.toggle('aberto');
+            const icone = btnMenu.querySelector('i');
+            if (menuPrincipal.classList.contains('aberto')) {
+                icone.classList.remove('fa-bars');
+                icone.classList.add('fa-xmark');
+            } else {
+                icone.classList.remove('fa-xmark');
+                icone.classList.add('fa-bars');
+            }
+        });
+
+        menuPrincipal.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    menuPrincipal.classList.remove('aberto');
+                    const icone = btnMenu.querySelector('i');
+                    icone.classList.remove('fa-xmark');
+                    icone.classList.add('fa-bars');
+                }
+            });
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                menuPrincipal.classList.remove('aberto');
+                const icone = btnMenu.querySelector('i');
+                icone.classList.remove('fa-xmark');
+                icone.classList.add('fa-bars');
+            }
+        });
+
+        /* ===== FUNÇÃO GENÉRICA DE CARROSSEL ===== */
+        function iniciarCarrossel(containerId) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+
+            const slides = container.querySelectorAll('.slide');
+            const indicadores = container.querySelectorAll('.indicadores span');
+            const btnAnterior = container.querySelector('.seta.esquerda');
+            const btnProximo  = container.querySelector('.seta.direita');
+            let atual = 0;
+            let autoplay;
+
+            function mostrar(indice) {
+                slides.forEach(s => s.classList.remove('ativo'));
+                indicadores.forEach(i => i.classList.remove('ativo'));
+                atual = (indice + slides.length) % slides.length;
+                slides[atual].classList.add('ativo');
+                indicadores[atual].classList.add('ativo');
+            }
+
+            btnProximo.addEventListener('click', () => { mostrar(atual + 1); reiniciar(); });
+            btnAnterior.addEventListener('click', () => { mostrar(atual - 1); reiniciar(); });
+            indicadores.forEach(b => b.addEventListener('click', () => {
+                mostrar(parseInt(b.dataset.slide));
+                reiniciar();
+            }));
+
+            function iniciar() { autoplay = setInterval(() => mostrar(atual + 1), 5000); }
+            function reiniciar() { clearInterval(autoplay); iniciar(); }
+
+            iniciar();
+        }
+
+        /* Inicia os dois carrosséis */
+        iniciarCarrossel('galeria'); // O ID é repetido, então pega o primeiro
+        // Para o segundo carrossel (galeria de projetos), precisamos de um seletor diferente
+        // Como os IDs se repetem, vamos usar querySelectorAll
+        document.querySelectorAll('#cb-galeria #galeria, #cb-galeria-projetos #galeria').forEach((el, index) => {
+            if (index > 0) iniciarCarrosselPorElemento(el);
+        });
+
+        function iniciarCarrosselPorElemento(container) {
+            const slides = container.querySelectorAll('.slide');
+            const indicadores = container.querySelectorAll('.indicadores span');
+            const btnAnterior = container.querySelector('.seta.esquerda');
+            const btnProximo  = container.querySelector('.seta.direita');
+            let atual = 0;
+            let autoplay;
+
+            function mostrar(indice) {
+                slides.forEach(s => s.classList.remove('ativo'));
+                indicadores.forEach(i => i.classList.remove('ativo'));
+                atual = (indice + slides.length) % slides.length;
+                slides[atual].classList.add('ativo');
+                indicadores[atual].classList.add('ativo');
+            }
+            btnProximo.addEventListener('click', () => { mostrar(atual + 1); reiniciar(); });
+            btnAnterior.addEventListener('click', () => { mostrar(atual - 1); reiniciar(); });
+            indicadores.forEach(b => b.addEventListener('click', () => {
+                mostrar(parseInt(b.dataset.slide));
+                reiniciar();
+            }));
+
+            function iniciar() { autoplay = setInterval(() => mostrar(atual + 1), 5000); }
+            function reiniciar() { clearInterval(autoplay); iniciar(); }
+
+            iniciar();
+        }
+    </script>
 </body>
 </html>
