@@ -1,0 +1,9 @@
+@media (max-width: 768px) {
+    main #cb1 .cada-membro .membro {
+        width: 100%;
+        max-width: 320px;
+    }
+    main #cb1 .cada-membro .membro .imagem {
+        height: 260px; /* mais alto em mobile */
+    }
+}
