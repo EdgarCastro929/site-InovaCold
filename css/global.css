@@ -159,7 +159,6 @@ main .caixa-azul aside#esquerdo #logo-caixa-azul {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #6B7280;
     width: 300px;
     height: 200px;
     border-radius: 6px;
