@@ -278,7 +278,7 @@ main #cz2.clientes .caixa-1 #image-cap {
     color: #F3F4F6;
     font-size: .95em;
     background-size: cover;
-    background-position: center;
+    background-position: center top;
 }
 main #cz2.clientes .caixa-1 #descricao {
     padding: 20px;
