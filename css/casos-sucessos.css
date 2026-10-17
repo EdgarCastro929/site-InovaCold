@@ -269,6 +269,7 @@ main #cz2.clientes .caixa-1 {
 }
 main #cz2.clientes .caixa-1:hover { transform: translateY(-5px); }
 main #cz2.clientes .caixa-1 #image-cap {
+    background-image: url("../img/alegria.jpg");
     background-color: #9CA3AF;
     height: 160px;
     display: flex;
@@ -279,7 +280,6 @@ main #cz2.clientes .caixa-1 #image-cap {
     background-size: cover;
     background-position: center;
 }
-main #cz2.clientes .caixa-1 #image-cap::after { content: "Image cap"; }
 main #cz2.clientes .caixa-1 #descricao {
     padding: 20px;
 }
@@ -334,7 +334,7 @@ main #cb2.passos #imagem {
     min-width: 280px;
     max-width: 400px;
     height: 320px;
-    border: 6px solid #F97316;
+    /*border: 6px solid #F97316;*/
     border-radius: 8px;
     position: relative;
     display: flex;
@@ -349,7 +349,7 @@ main #cb2.passos #imagem::before {
     left: 60px;
     width: 60px;
     height: 60px;
-    border: 6px solid #F97316;
+    /*border: 6px solid #F97316;*/
     border-radius: 50%;
 }
 main #cb2.passos #imagem::after {
@@ -359,9 +359,6 @@ main #cb2.passos #imagem::after {
     right: 60px;
     width: 0;
     height: 0;
-    border-left: 60px solid transparent;
-    border-right: 60px solid transparent;
-    border-bottom: 90px solid #F97316;
 }
 
 /* ===== CTA AZUL + BRANCO (#cz-cta) ===== */
